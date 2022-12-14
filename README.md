@@ -50,7 +50,7 @@
             }
         }
     - 2. 增删改查的实现
-        1. 增
+         1. 增
             将写入的数据存放在一个对象中，然后通过push的方法，将对象添加data中定义的对象中
            add() {
                     let stu = {
@@ -62,16 +62,16 @@
                     this.students.push(stu)
                 }
         
-        2. 删
-        通过splice带参(下标)实现内容的删除
-         del(index) {
+         2. 删
+         通过splice带参(下标)实现内容的删除
+          del(index) {
                     if (confirm('确定删除吗？')) {
                         this.students.splice(index, 1)
                     }
 
-        3. 改
-        先获取要改的数据，然后在原始数据上进行赋值，在重新添加进去
-          getOne(index) {
+         3. 改
+         先获取要改的数据，然后在原始数据上进行赋值，在重新添加进去
+           getOne(index) {
                     // 备份当前需要修改的学生对象，在数组中的下标
                     this.updateIndex = index;
                     // 根据数组下标，获取指定对象，赋值给stu2
@@ -96,8 +96,8 @@
                     stu3.Teacher = this.Teacher;
                 }
 
-        4. 查 
-        通过监听输入的内容来进行匹配，从而显示对应的内容。
+         4. 查 
+         通过监听输入的内容来进行匹配，从而显示对应的内容。
              results: function () {
                     var students = this.students;
                     if (this.searchStr == '') {
