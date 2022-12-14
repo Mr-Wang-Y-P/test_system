@@ -49,11 +49,11 @@
                 display9.style.display = 'block'
             }
         }
+	
     - 2. 增删改查的实现
 
-
-         1. 增
-            将写入的数据存放在一个对象中，然后通过push的方法，将对象添加data中定义的对象中
+     	1. 增
+        将写入的数据存放在一个对象中，然后通过push的方法，将对象添加data中定义的对象中
            
 	 add() {
                     let stu = {
@@ -107,6 +107,7 @@
          4. 查 
          通过监听输入的内容来进行匹配，从而显示对应的内容。
             
+	    
 	 results: function () {
                     var students = this.students;
                     if (this.searchStr == '') {
@@ -129,6 +130,8 @@
                     });
                     return students;
                 }
+
+
 
     - 3. 在使用v-for的时候，都必须会加上一个必要的key值。
     
