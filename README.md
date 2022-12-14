@@ -51,31 +51,34 @@
         }
 	
     - 2. 增删改查的实现
-
-     	1. 增
+    
+    
+    
+     1. 增
         将写入的数据存放在一个对象中，然后通过push的方法，将对象添加data中定义的对象中
-           
-	 add() {
-                    let stu = {
-                        Sno: this.Sno,
-                        STUname: this.STUname,
-                        xueyuan: this.xueyuan,
-                        Teacher: this.Teacher,
-                    }
-                    this.students.push(stu)
-                }
-        
+	 
+	 	
+			add() {
+                      		let stu = {
+                       		 Sno: this.Sno,
+                        	STUname: this.STUname,
+                        	xueyuan: this.xueyuan,
+                        	Teacher: this.Teacher,
+                    	}
+                    		this.students.push(stu)
+                	}
+		
+		
+     2. 删
+        通过splice带参(下标)实现内容的删除
 
-         2. 删
-         通过splice带参(下标)实现内容的删除
-
-           del(index) {
+           	del(index) {
                     if (confirm('确定删除吗？')) {
                         this.students.splice(index, 1)
                     }
 
 
-         3. 改
+     3. 改
          先获取要改的数据，然后在原始数据上进行赋值，在重新添加进去
 
             getOne(index) {
@@ -104,32 +107,31 @@
                 }
 
 
-         4. 查 
+      	4. 查 
          通过监听输入的内容来进行匹配，从而显示对应的内容。
-            
-	    
-	 results: function () {
-                    var students = this.students;
-                    if (this.searchStr == '') {
-                        return students;
-                    }
-                    var searchStr = this.searchStr.trim().toLowerCase();//去除空格转换为小写
-                    students = students.filter(function (ele) {
-                        if (ele.Sno.toLowerCase().indexOf(searchStr) != -1) {
-                            return ele;
-                        }
-                        if (ele.STUname.toLowerCase().indexOf(searchStr) != -1) {
-                            return ele;
-                        }
-                        if (ele.xueyuan.toLowerCase().indexOf(searchStr) != -1) {
-                            return ele;
-                        }
-                        if (ele.Teacher.toLowerCase().indexOf(searchStr) != -1) {
-                            return ele;
-                        }
-                    });
-                    return students;
-                }
+	
+			results: function () {
+                    	var students = this.students;
+                    	if (this.searchStr == '') {
+                       	 return students;
+                    	}
+                    	var searchStr = this.searchStr.trim().toLowerCase();//去除空格转换为小写
+                    	students = students.filter(function (ele) {
+                        	if (ele.Sno.toLowerCase().indexOf(searchStr) != -1) {
+                           		 return ele;
+                        	}
+                        	if (ele.STUname.toLowerCase().indexOf(searchStr) != -1) {
+                            		return ele;
+                        	}
+                       		if (ele.xueyuan.toLowerCase().indexOf(searchStr) != -1) {
+                            		return ele;
+                       		}
+                        	if (ele.Teacher.toLowerCase().indexOf(searchStr) != -1) {
+                            		return ele;
+                        	}
+                    		});
+                    		return students;
+                	}
 
 
 
