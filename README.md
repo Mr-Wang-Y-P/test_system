@@ -50,6 +50,8 @@
             }
         }
     - 2. 增删改查的实现
+
+
          1. 增
             将写入的数据存放在一个对象中，然后通过push的方法，将对象添加data中定义的对象中
            
@@ -63,6 +65,7 @@
                     this.students.push(stu)
                 }
         
+
          2. 删
          通过splice带参(下标)实现内容的删除
 
@@ -70,6 +73,7 @@
                     if (confirm('确定删除吗？')) {
                         this.students.splice(index, 1)
                     }
+
 
          3. 改
          先获取要改的数据，然后在原始数据上进行赋值，在重新添加进去
@@ -103,7 +107,6 @@
          4. 查 
          通过监听输入的内容来进行匹配，从而显示对应的内容。
             
-
 	 results: function () {
                     var students = this.students;
                     if (this.searchStr == '') {
@@ -111,7 +114,6 @@
                     }
                     var searchStr = this.searchStr.trim().toLowerCase();//去除空格转换为小写
                     students = students.filter(function (ele) {
-
                         if (ele.Sno.toLowerCase().indexOf(searchStr) != -1) {
                             return ele;
                         }
