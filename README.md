@@ -110,6 +110,7 @@
       	4. 查 
          通过监听输入的内容来进行匹配，从而显示对应的内容。
 	
+	
 			results: function () {
                     	var students = this.students;
                     	if (this.searchStr == '') {
